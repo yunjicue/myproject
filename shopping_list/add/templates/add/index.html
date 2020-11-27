@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>index page</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+    <h1>제품 목록</h1>
+
+    {% for list in itemlist %}
+            <ul>
+                <p>{{list.itemname}} 가격 : {{list.price}}원</p>
+                <li><a href="/{{list.id}}/">{{list.itemname}}에 대한 정보</a></li>
+            </ul>
+{% endfor %}
+    <li><a href="/add/">제품추가</a></li>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>detail page</title>
+    </head>
+    <body>
+    <h1>{{ item.itemname }}에 대한 정보</h1>
+
+
+   {% for info in item.info_set.all %}
+            <ul>
+                <h3>{{info.title}}</h3>
+                <p>{{info.contents}}</p>
+            </ul>
+    {% endfor %}
+    <li><a href="/">home</a></li>
+    </body>
+</html>

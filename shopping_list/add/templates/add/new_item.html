@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            new_itme page
+        </title>
+    </head>
+    <body>
+    <h1>제품 추가하기</h1>
+    <form method="POST">
+        {% csrf_token %}
+        제품 이름<br>
+        <input type="text" name="itemname"><br>
+        제품 가격<br>
+        <input type="int" name="price"><br>
+        <input type="submit" value="글쓰기">
+        <li><a href="/">home</a></li>
+    </form>
+    </body>
+</html>
